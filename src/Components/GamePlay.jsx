@@ -65,20 +65,63 @@ const onClickHandlerForRules = ()=>{
 export default GamePlay;
 
 const MainContainer = styled.main`
-padding-top: 64px;
-padding-left: 80px;
-max-height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
-.top_section{
+  .top_section {
     display: flex;
-    justify-content: space-around;
-    align-items: end;
-}
-.mid_section,.btn{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
 
+  .mid_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Tablet styles */
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+    
+    .top_section {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn {
+      gap: 1rem;
+    }
+  }
+
+  /* Mobile styles */
+  @media (max-width: 480px) {
+    padding: 1rem 0.5rem;
+    
+    .top_section {
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .mid_section {
+      gap: 1.5rem;
+    }
+  }
 `;
